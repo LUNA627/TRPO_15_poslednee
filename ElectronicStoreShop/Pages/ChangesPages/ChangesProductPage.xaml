@@ -1,0 +1,123 @@
+﻿<Page x:Class="ElectronicStoreShop.Pages.ChangesPages.ChangesProductPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ElectronicStoreShop.Pages.ChangesPages"
+      xmlns:validation="clr-namespace:ElectronicStoreShop.Validation"
+      mc:Ignorable="d" 
+      Style="{StaticResource MainPageStyle}"
+      Title="ChangesProductPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
+            <Label Content="Добавление товара" Style="{StaticResource WindowTitleLabelStyle}"/>
+            <Button Content="Назад"
+                    Click="Back_Click"
+                    Style="{StaticResource GoBackButtonStyle}"/>
+        </Grid>
+
+        <ScrollViewer Grid.Column="0" Grid.Row="1">
+            <StackPanel Style="{StaticResource StackPanelStyleAddProduct}">
+
+                <TextBlock Text="Название" Style="{StaticResource ProductDescriptionMenuChangeTextStyle}"/>
+                <TextBox Style="{StaticResource FormTextBoxStyle}"
+                         x:Name="NameTextBox">
+                    <Binding Path="Product.Name" UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <validation:EmptyFieldValidation/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox>
+
+                <TextBlock Text="Цена" Style="{StaticResource ProductDescriptionMenuChangeTextStyle}"/>
+                <TextBox Style="{StaticResource FormTextBoxStyle}"
+                         Name="PriceTextBox">
+                    <TextBox.Text>
+                        <Binding Path="Product.Price" UpdateSourceTrigger="PropertyChanged">
+                            <Binding.ValidationRules>
+                                <validation:PriceValidation/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+
+                <TextBlock Text="Остаток" Style="{StaticResource ProductDescriptionMenuChangeTextStyle}"/>
+                <TextBox Style="{StaticResource FormTextBoxStyle}"
+                         Name="StockTextBox">
+                    <TextBox.Text>
+                        <Binding Path="Product.Stock" UpdateSourceTrigger="PropertyChanged">
+                            <Binding.ValidationRules>
+                                <validation:StrockValidation/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+
+                <TextBlock Text="Рейтинг" Style="{StaticResource ProductDescriptionMenuChangeTextStyle}"/>
+                <TextBox Style="{StaticResource FormTextBoxStyle}"
+                         Name="RatingTextBox">
+                    <TextBox.Text>
+                        <Binding Path="Product.Rating" UpdateSourceTrigger="PropertyChanged">
+                            <Binding.ValidationRules>
+                                <validation:RatingValidation/>
+                            </Binding.ValidationRules>
+                        </Binding>
+                    </TextBox.Text>
+                </TextBox>
+
+                <TextBlock Text="Категория" Style="{StaticResource ProductDescriptionTextStyle}"/>
+                <ComboBox Style="{StaticResource BrandCatComboBoxStyle}"
+                          ItemsSource="{Binding Categories}"
+                          SelectedValue="{Binding Product.CategoryId, UpdateSourceTrigger=PropertyChanged}"
+                          Name="CategoryComboBox">
+                </ComboBox>
+
+
+                <!-- Бренд -->
+                <TextBlock Text="Бренд" Style="{StaticResource ProductDescriptionTextStyle}"/>
+                <ComboBox Style="{StaticResource BrandCatComboBoxStyle}"
+                          ItemsSource="{Binding Brands}"
+                          SelectedValue="{Binding Product.BrandId}"
+                          Name="BrandComboBox"/>
+
+                <StackPanel Margin="0,0,0,15">
+                    <TextBlock Text="Теги" Style="{StaticResource ProductDescriptionMenuChangeTextStyle}"/>
+
+                    <ListBox Style="{StaticResource TagsListBoxStyle}"
+                             ItemsSource="{Binding Tags}"
+                             DisplayMemberPath="Name"
+                             SelectedValuePath="Id"
+                             SelectionMode="Multiple"
+                             Name="TagsListBox"
+                             Height="120"
+                             SelectionChanged="TagsListBox_SelectionChanged">
+                    </ListBox>
+                </StackPanel>
+
+                <TextBlock Text="Описание" Style="{StaticResource ProductDescriptionTextStyle}"/>
+                <TextBox Style="{StaticResource FormDescriptionTextBoxStyle}"
+                         Text="{Binding Product.Description, UpdateSourceTrigger=PropertyChanged}"/>
+
+                <!-- Кнопки -->
+                <Button Content="Добавить" 
+                        Style="{StaticResource AddButtonObStyle}"
+                        Click="AddProduct_Click"/>
+                <Button Content="Отмена" 
+                        Style="{StaticResource СancelButtonStyle}"
+                        Click="Cancel_Click"/>
+            </StackPanel>
+        </ScrollViewer>
+
+
+    </Grid>
+</Page>

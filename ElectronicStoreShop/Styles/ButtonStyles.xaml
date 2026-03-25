@@ -1,0 +1,281 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+
+    <!-- Основная кнопка -->
+    <Style x:Key="PrimaryButtonStyle" TargetType="Button" 
+           BasedOn="{StaticResource MaterialDesignRaisedButton}">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Padding" Value="15,8"/>
+        <Setter Property="Background" Value="#00C4B4"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderBrush" Value="#00C4B4"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="MinWidth" Value="100"/>
+    </Style>
+
+    <!-- Основная кнопка(Вход общий) -->
+    <Style x:Key="LoginButtonStyle" TargetType="Button" 
+        BasedOn="{StaticResource MaterialDesignRaisedButton}">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Padding" Value="15,8"/>
+        <Setter Property="Background" Value="#00C4B4"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderBrush" Value="#00C4B4"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Width" Value="300"/>
+        <Setter Property="Height" Value="70"/>
+    </Style>
+
+    <!-- Основная кнопка(Вход для менеждера) -->
+    <Style x:Key="LoginEnterManagerButtonStyle" TargetType="Button" 
+ BasedOn="{StaticResource MaterialDesignRaisedButton}">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="Background" Value="#00b4c4"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderBrush" Value="#00b4c4"/>
+        <Setter Property="BorderThickness" Value="1"/>
+
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+
+        <Setter Property="Width" Value="300"/>
+        <Setter Property="Height" Value="70"/>
+    </Style>
+
+
+
+    <!-- Основная кнопка(Вход для менеждера) -->
+    <Style x:Key="EnterManagerButtonStyle" TargetType="Button" 
+    BasedOn="{StaticResource MaterialDesignRaisedButton}">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="Background" Value="#00C4B4"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderBrush" Value="#00C4B4"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+
+        <Setter Property="Width" Value="170"/>
+        <Setter Property="Height" Value="40"/>
+    </Style>
+
+    <!-- Основная кнопка(Отмена для менеждера) -->
+    <Style x:Key="CancelManagerButtonStyle" TargetType="Button" 
+BasedOn="{StaticResource MaterialDesignRaisedButton}">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="Background" Value="#00b4c4"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderBrush" Value="#00b4c4"/>
+        <Setter Property="BorderThickness" Value="1"/>
+
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+
+        <Setter Property="Width" Value="170"/>
+        <Setter Property="Height" Value="40"/>
+    </Style>
+
+
+
+
+    <!-- Кнопка редактирование товаров(Для менеждера) -->
+    <Style x:Key="ChangesProductButtonStyle" TargetType="Button" 
+ BasedOn="{StaticResource MaterialDesignRaisedButton}">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="10, 10, 30, 10"/>
+        <Setter Property="Background" Value="#00b4c4"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderBrush" Value="#00b4c4"/>
+        <Setter Property="BorderThickness" Value="1"/>
+
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+
+        <Setter Property="Width" Value="210"/>
+        <Setter Property="Height" Value="40"/>
+    </Style>
+
+    <!-- Кнопка для сброса фильтров -->
+    <Style x:Key="FilterClearuttonStyle" TargetType="Button" 
+BasedOn="{StaticResource MaterialDesignRaisedButton}">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="Background" Value="#00b4c4"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderBrush" Value="#00b4c4"/>
+        <Setter Property="BorderThickness" Value="1"/>
+
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+
+        <Setter Property="Width" Value="370"/>
+        <Setter Property="Height" Value="40"/>
+    </Style>
+
+    <!-- Кнопка для применения фильтров -->
+    <Style x:Key="FilterApplyButtonStyle" TargetType="Button" 
+BasedOn="{StaticResource MaterialDesignRaisedButton}">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="Background" Value="#00C4B4"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderBrush" Value="#00C4B4"/>
+        <Setter Property="BorderThickness" Value="1"/>
+
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+
+        <Setter Property="Width" Value="370"/>
+        <Setter Property="Height" Value="40"/>
+    </Style>
+
+
+
+    <!-- Кнопка добавления (обзорная) -->
+    <Style x:Key="AddButtonObStyle" TargetType="Button" 
+           BasedOn="{StaticResource MaterialDesignRaisedButton}">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="5, 20, 5, 5"/>
+        <Setter Property="Padding" Value="8,4"/>
+        <Setter Property="Background" Value="#00C4B4"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Width" Value="800"/>
+    </Style>
+
+    <!-- Кнопка добавления -->
+    <Style x:Key="AddButtonStyle" TargetType="Button" 
+       BasedOn="{StaticResource MaterialDesignRaisedButton}">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="10, 10, 10, 5"/>
+        <Setter Property="Padding" Value="8,4"/>
+        <Setter Property="Background" Value="#00C4B4"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Width" Value="300"/>
+        <Setter Property="Height" Value="70"/>
+
+
+    </Style>
+
+    <!-- Кнопка редактирования -->
+    <Style x:Key="EditButtonStyle" TargetType="Button" 
+           BasedOn="{StaticResource MaterialDesignRaisedButton}">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="10, 10, 10, 5"/>
+        <Setter Property="Padding" Value="8,4"/>
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Background" Value="#00b4c4"/>
+        <Setter Property="Width" Value="300"/>
+    </Style>
+
+    <!-- Кнопка удаления -->
+    <Style x:Key="DeleteButtonStyle" TargetType="Button" 
+           BasedOn="{StaticResource MaterialDesignRaisedButton}">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="10, 10, 10, 5"/>
+        <Setter Property="Padding" Value="8,4"/>
+        <Setter Property="BorderBrush" Value="#00b4c4"/>
+        <Setter Property="Width" Value="300"/>
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="Background" Value="#00b4c4"/>
+        <Setter Property="Foreground" Value="White"/>
+    </Style>
+
+    <!-- Кнопка назад -->
+    <Style x:Key="GoBackButtonStyle" TargetType="Button" 
+       BasedOn="{StaticResource MaterialDesignRaisedButton}">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="5, 0, 10, 0"/>
+        <Setter Property="Padding" Value="8,4"/>
+        <Setter Property="Background" Value="#00b4c4"/>
+        <Setter Property="BorderBrush" Value="#00b4c4"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="Width" Value="160"/>
+
+    </Style>
+
+
+    <!-- Кнопка изменить товары (меню изменений) -->
+    <Style x:Key="AddProductMenuChangeButtonStyle" TargetType="Button" 
+ BasedOn="{StaticResource MaterialDesignRaisedButton}">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="10, 0, 10, 5"/>
+        <Setter Property="Background" Value="#00C4B4"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderBrush" Value="#00C4B4"/>
+        <Setter Property="BorderThickness" Value="1"/>
+
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+
+        <Setter Property="Width" Value="360"/>
+        <Setter Property="Height" Value="60"/>
+    </Style>
+
+    <!-- Кнопки остальные (меню изменений) -->
+    <Style x:Key="ManyProductMenuChangeButtonStyle" TargetType="Button" 
+BasedOn="{StaticResource MaterialDesignRaisedButton}">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="10, 10, 10, 5"/>
+        <Setter Property="Background" Value="#00b4c4"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderBrush" Value="#00b4c4"/>
+        <Setter Property="BorderThickness" Value="1"/>
+
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+
+        <Setter Property="Width" Value="360"/>
+        <Setter Property="Height" Value="40"/>
+    </Style>
+
+
+    <!-- Кнопка назад (меню изменений)-->
+    <Style x:Key="GoBackMenuChangeButtonStyle" TargetType="Button" 
+   BasedOn="{StaticResource MaterialDesignRaisedButton}">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="5, 15, 10, 0"/>
+        <Setter Property="Padding" Value="8,4"/>
+        <Setter Property="Background" Value="#00b4c4"/>
+        <Setter Property="BorderBrush" Value="#00b4c4"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Width" Value="360"/>
+
+    </Style>
+
+
+
+    <!-- Кнопка отмена -->
+    <Style x:Key="СancelButtonStyle" TargetType="Button" 
+    BasedOn="{StaticResource MaterialDesignRaisedButton}">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="Padding" Value="8,4"/>
+        <Setter Property="Background" Value="#00b4c4"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Width" Value="800"/>
+
+    </Style>
+
+</ResourceDictionary>

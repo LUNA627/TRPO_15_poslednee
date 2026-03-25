@@ -1,0 +1,39 @@
+﻿<Page x:Class="ElectronicStoreShop.Pages.EnterPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ElectronicStoreShop.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d"
+      Style="{StaticResource MainPageStyle}"
+      Title="Вход в магазин электроники">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Column="1" Grid.Row="0" Content="Вход в магазин электроники" Style="{StaticResource WindowTitleLabelStyle}"/>
+
+        <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource MainSectionBorderStyle}">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+
+                <Button Grid.Row="0" Content="Войти как посетитель" Style="{StaticResource LoginButtonStyle}" Click="BtnEnterVisitor_Click"/>
+                <Button Grid.Row="1" Content="Войти как менеджер" Style="{StaticResource LoginEnterManagerButtonStyle}" Click="BtnEnterManager_Click"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

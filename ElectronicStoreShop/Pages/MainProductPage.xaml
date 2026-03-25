@@ -1,0 +1,232 @@
+﻿<Page x:Class="ElectronicStoreShop.Pages.MainProductPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ElectronicStoreShop.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      Style="{StaticResource MainPageProductStyle}"
+      Title="MainProductPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Column="0" Grid.Row="0" Content="Каталог товаров" Style="{StaticResource WindowTitleLabelStyle}"/>
+        <TextBox Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Style="{StaticResource SearchTextBoxStyle}" TextChanged="TextBox_TextChanged"/>
+
+        <Label Grid.Column="0" Grid.Row="2" 
+       Content="Сортировка" 
+       Style="{StaticResource SectionHeaderSortLabelStyle}"/>
+
+        <ComboBox Grid.Column="0" Grid.Row="3" 
+              Style="{StaticResource SortComboBoxStyle}"
+              SelectionChanged="SortComboBox_SelectionChanged"
+              Name="SortComboBox">
+    
+        </ComboBox>
+
+
+        <StackPanel Grid.Column="0" Grid.Row="4" Style="{StaticResource StackPanelStyleRadioBtn}">
+            <RadioButton Content="Убывание"
+                 GroupName="SortDirection"
+                 Checked="SortDirection_Checked"
+                 Tag="Descending"/>
+            <RadioButton Content="Возрастание"
+                 GroupName="SortDirection"
+                 Checked="SortDirection_Checked"
+                 Tag="Ascending"
+                 IsChecked="True"/>
+        </StackPanel>
+
+        <Label Grid.Column="0" Grid.Row="5" 
+       Content="Фильтрация" 
+       Style="{StaticResource SectionHeaderFilerLabelStyle}"/>
+
+        <ComboBox Grid.Column="0" Grid.Row="6" 
+              Style="{StaticResource SortComboBoxStyle}"
+              Name="CategoryFilterComboBox"
+              Tag="Category">
+        </ComboBox>
+
+        <ComboBox Grid.Column="0" Grid.Row="7" 
+              Style="{StaticResource SortComboBoxStyle}"
+              Name="BrandFilterComboBox"
+              Tag="Brand">
+        </ComboBox>
+
+        <!-- Фильтр по цене -->
+        <StackPanel Grid.Column="0" Grid.Row="8" Orientation="Horizontal">
+            <TextBox Style="{StaticResource FormTextBoxStyle}"
+             Text="{Binding FilterPriceFrom, UpdateSourceTrigger=PropertyChanged}"
+             materialDesign:HintAssist.Hint="от"
+             Name="PriceFromTextBox"/>
+            <TextBox Style="{StaticResource FormTextBoxStyle}"
+             Text="{Binding FilterPriceTo, UpdateSourceTrigger=PropertyChanged}"
+             materialDesign:HintAssist.Hint="до"
+             Name="PriceToTextBox"/>
+        </StackPanel>
+
+        <!-- Кнопки фильтров -->
+        <StackPanel Grid.Column="0" Grid.Row="9" Style="{StaticResource StackPanelStyleProduct}">
+            <Button Content="Применить" 
+            Style="{StaticResource FilterApplyButtonStyle}"
+            Click="ApplyFilters_Click"/>
+            <Button Content="Сбросить фильтры" 
+            Style="{StaticResource FilterClearuttonStyle}" 
+            Click="RemoveFilter_Click"/>
+        </StackPanel>
+
+
+        <ListView Grid.Column="1" Grid.Row="2" Grid.RowSpan="8" 
+          Style="{StaticResource ProductListViewStyle}"
+          ItemsSource="{Binding ProductsView}"
+          Name="ProductsList">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border>
+                        <Border.Style>
+                            <Style TargetType="Border" BasedOn="{StaticResource ProductCardBorderStyle}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Stock}" Value="1">
+                                        <Setter Property="BorderBrush" Value="#ffd129"/>
+                                        <Setter Property="BorderThickness" Value="2"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Stock}" Value="2">
+                                        <Setter Property="BorderBrush" Value="#ffd129"/>
+                                        <Setter Property="BorderThickness" Value="2"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Stock}" Value="3">
+                                        <Setter Property="BorderBrush" Value="#ffd129"/>
+                                        <Setter Property="BorderThickness" Value="2"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Stock}" Value="4">
+                                        <Setter Property="BorderBrush" Value="#ffd129"/>
+                                        <Setter Property="BorderThickness" Value="2"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Stock}" Value="5">
+                                        <Setter Property="BorderBrush" Value="#ffd129"/>
+                                        <Setter Property="BorderThickness" Value="2"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Stock}" Value="6">
+                                        <Setter Property="BorderBrush" Value="#ffd129"/>
+                                        <Setter Property="BorderThickness" Value="2"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Stock}" Value="7">
+                                        <Setter Property="BorderBrush" Value="#ffd129"/>
+                                        <Setter Property="BorderThickness" Value="2"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Stock}" Value="8">
+                                        <Setter Property="BorderBrush" Value="#ffd129"/>
+                                        <Setter Property="BorderThickness" Value="2"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Stock}" Value="9">
+                                        <Setter Property="BorderBrush" Value="#ffd129"/>
+                                        <Setter Property="BorderThickness" Value="2"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+
+                        <Grid Margin="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="10"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <!-- Название товара -->
+                            <TextBlock Grid.Column="0" Grid.Row="0" 
+                               Text="{Binding Name}" 
+                               Style="{StaticResource ProductTitleTextStyle}" 
+                               TextWrapping="Wrap"/>
+
+                            <!-- Цена -->
+                            <TextBlock Grid.Column="1" Grid.Row="0" 
+                               Text="{Binding Price, StringFormat={}{0:F2} $}" 
+                               Style="{StaticResource ProductPriceTextStyle}"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Right"/>
+
+                            <!-- Рейтинг -->
+                            <StackPanel Grid.Column="0" Grid.Row="1" 
+                                Orientation="Horizontal">
+                                <TextBlock Text="⭐" FontSize="14"/>
+                                <TextBlock Text="{Binding Rating}" 
+                                   Style="{StaticResource ProductInfoTextStyle}"/>
+                            </StackPanel>
+
+                            <!-- Категория -->
+                            <StackPanel Grid.Column="0" Grid.Row="2">
+                                <TextBlock Text="Категория" 
+                                   Style="{StaticResource ProductInfoTextStyle}" 
+                                   FontWeight="SemiBold"/>
+                                <TextBlock Text="{Binding Category.Name}" 
+                                   Style="{StaticResource ProductInfoTextStyle}"/>
+                            </StackPanel>
+
+                            <!-- Описание -->
+                            <StackPanel Grid.Column="0" Grid.Row="5">
+                                <TextBlock Text="Описание" 
+                                   Style="{StaticResource ProductInfoTextStyle}" 
+                                   FontWeight="SemiBold"/>
+                                <TextBlock
+                                   Text="{Binding Description}" 
+                                   Style="{StaticResource ProductDescriptionTextStyle}"
+                                   TextWrapping="Wrap"/>
+                            </StackPanel>
+
+                            <!-- Остаток -->
+                            <StackPanel Grid.Column="1" Grid.Row="5">
+                                <TextBlock Text="{Binding Stock, StringFormat={}Остаток: {0} шт.}" FontWeight="SemiBold" 
+                                   Style="{StaticResource ProductInfoTextStyle}"/>
+                            </StackPanel>
+
+                            <!-- Теги -->
+                            <TextBlock Grid.Column="0" Grid.Row="6" 
+                                Text="{Binding DisplayTags}"
+                                Style="{StaticResource TagInfoTextStyle}"/>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Button Grid.Column="1" Grid.Row="0" Content="Редактирование товаров" Style="{StaticResource ChangesProductButtonStyle}" Click="GoChangesPage_Click"/>
+
+        <StackPanel Grid.Column="0" Grid.Row="10" Style="{StaticResource FilterFPanelStyle}">
+           <Label Content="{Binding CountInfo}" 
+           Style="{StaticResource FilterLabelStyle}"
+           HorizontalAlignment="Center"/>
+
+        </StackPanel>
+    </Grid>
+
+</Page>

@@ -1,0 +1,56 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+
+    <!-- ComboBox для сортировки -->
+    <Style x:Key="SortComboBoxStyle" TargetType="ComboBox"
+           BasedOn="{StaticResource MaterialDesignComboBox}">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="10, 5, 5, 5"/>
+        <Setter Property="Padding" Value="8,4"/>
+        <Setter Property="MinWidth" Value="180"/>
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="BorderBrush" Value="#00C4B4"/>
+        <Setter Property="Background" Value="White"/>
+    </Style>
+    
+    
+
+    <!-- ComboBox для фильтров (категория, бренд) -->
+    <Style x:Key="FilterComboBoxStyle" TargetType="ComboBox" 
+           BasedOn="{StaticResource MaterialDesignComboBox}">
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="Margin" Value="2,5"/>
+        <Setter Property="Padding" Value="6,4"/>
+        <Setter Property="MinWidth" Value="150"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="BorderBrush" Value="#00C4B4"/>
+    </Style>
+
+    <!-- ComboBox для форм -->
+    <Style x:Key="FormComboBoxStyle" TargetType="ComboBox" 
+           BasedOn="{StaticResource MaterialDesignComboBox}">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="5,3"/>
+        <Setter Property="Padding" Value="8,5"/>
+        <Setter Property="MinWidth" Value="200"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="BorderBrush" Value="#00C4B4"/>
+    </Style>
+
+    <!-- ComboBox для бренда, категорий -->
+    <Style x:Key="BrandCatComboBoxStyle" TargetType="ComboBox" 
+        BasedOn="{StaticResource MaterialDesignComboBox}">
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="Margin" Value="2,5"/>
+        <Setter Property="Padding" Value="6,4"/>
+        <Setter Property="MinWidth" Value="150"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="BorderBrush" Value="#00C4B4"/>
+        <Setter Property="DisplayMemberPath" Value="Name"/>
+        <Setter Property="SelectedValuePath" Value="Id"/>
+    </Style>
+
+
+</ResourceDictionary>

@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="FilterSeparatorStyle" TargetType="Separator">
+        <Setter Property="Background" Value="#00C4B4"/>
+        <Setter Property="Height" Value="2"/>
+        <Setter Property="Margin" Value="0,0,0,5"/>
+    </Style>
+</ResourceDictionary>

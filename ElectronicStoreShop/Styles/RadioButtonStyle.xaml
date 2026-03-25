@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- RadioButton для сортировки -->
+    <Style x:Key="FilterRadioButtonStyle" TargetType="RadioButton">
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="Margin" Value="0, 0, 10, 0"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Background" Value="#00C4B4"/>
+
+    </Style>
+</ResourceDictionary>

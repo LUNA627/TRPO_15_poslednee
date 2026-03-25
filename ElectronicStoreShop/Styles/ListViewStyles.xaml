@@ -1,0 +1,41 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+
+    <!-- ListView -->
+    <Style x:Key="ProductListViewStyle" TargetType="ListView" 
+           BasedOn="{StaticResource MaterialDesignListView}">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
+        <Setter Property="SelectionMode" Value="Single"/>
+    </Style>
+
+    <!-- ListViewItem -->
+    <Style x:Key="ProductListViewItemStyle" TargetType="ListViewItem" 
+           BasedOn="{StaticResource MaterialDesignListBoxItem}">
+        <Setter Property="Padding" Value="10"/>
+        <Setter Property="Margin" Value="2"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Width" Value="700"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="#E0E0E0"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+    </Style>
+
+    <!-- DataTemplate для товара -->
+    <Style x:Key="ProductCardBorderStyle" TargetType="Border">
+        <Setter Property="Padding" Value="15"/>
+        <Setter Property="Margin" Value="3"/>
+        <Setter Property="Width" Value="700"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="CornerRadius" Value="4"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="BorderBrush" Value="#E0E0E0"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+
+    </Style>
+    
+</ResourceDictionary>

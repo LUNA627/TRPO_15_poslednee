@@ -1,0 +1,87 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+
+    <!-- Основной TextBox -->
+    <Style x:Key="SearchTextBoxStyle" TargetType="TextBox" 
+           BasedOn="{StaticResource MaterialDesignTextBox}">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="10, 0, 30, 0"/>
+        <Setter Property="Padding" Value="8,4"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Height" Value="50"/>
+
+        <Setter Property="BorderBrush" Value="#00C4B4"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="materialDesign:HintAssist.Hint" Value="Введите текст для поиска"/>
+    </Style>
+
+    <!-- TextBox для фильтров -->
+    <Style x:Key="FilterTextBoxStyle" TargetType="TextBox" 
+           BasedOn="{StaticResource MaterialDesignTextBox}">
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="Margin" Value="2,5"/>
+        <Setter Property="Padding" Value="6,4"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="BorderBrush" Value="#00C4B4"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Width" Value="120"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <!-- TextBox для фильтров(цена) -->
+    <Style x:Key="FilterPriceTextBoxStyle" TargetType="TextBox" 
+       BasedOn="{StaticResource MaterialDesignTextBox}">
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="Margin" Value="2,5"/>
+        <Setter Property="Padding" Value="6,4"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="BorderBrush" Value="#00C4B4"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Width" Value="80"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <!-- TextBox для форм редактирования -->
+    <Style x:Key="FormTextBoxStyle" TargetType="TextBox" 
+           BasedOn="{StaticResource MaterialDesignTextBox}">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="10,5, 5, 10"/>
+        <Setter Property="Padding" Value="8,5"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="BorderBrush" Value="#00C4B4"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="MinWidth" Value="200"/>
+        <Setter Property="Height" Value="60"/>
+    </Style>
+
+    <!-- TextBox для поля описание -->
+    <Style x:Key="FormDescriptionTextBoxStyle" TargetType="TextBox" 
+        BasedOn="{StaticResource MaterialDesignTextBox}">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="10,5, 5, 10"/>
+        <Setter Property="Padding" Value="8,5"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="BorderBrush" Value="#00C4B4"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="AcceptsReturn" Value="True"/>
+        <Setter Property="Height" Value="100"/>
+    </Style>
+
+
+    <!-- Стиль для ListBox тегов -->
+    <Style x:Key="TagsListBoxStyle" TargetType="ListBox" 
+       BasedOn="{StaticResource MaterialDesignListBox}">
+        <Setter Property="BorderBrush" Value="#00C4B4"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Padding" Value="4"/>
+        <Setter Property="SelectionMode" Value="Multiple"/>
+    </Style>
+
+</ResourceDictionary>
