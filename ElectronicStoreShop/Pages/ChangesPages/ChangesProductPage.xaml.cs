@@ -84,11 +84,31 @@ namespace ElectronicStoreShop.Pages.ChangesPages
 
         private void LoadCategoriesAndBrands()
         {
-            Categories = new ObservableCollection<Category>(
-                _context.Categories.AsNoTracking().ToList());
+            var categories = _context.Categories.ToList();
+            Categories.Clear();
 
-            Brands = new ObservableCollection<Brand>(
-                _context.Brands.AsNoTracking().ToList());
+            Categories.Add(new Category { Id = 0, Name = "Выберите категорию" });
+
+            foreach (var category in categories)
+            {
+                Categories.Add(category);
+            }
+
+            Product.CategoryId = 0;
+
+
+
+            var brands = _context.Brands.ToList();
+            Brands.Clear();
+
+            Brands.Add(new Brand { Id = 0, Name = "Выберите бренд" });
+
+            foreach (var brand in brands)
+            {
+                Brands.Add(brand);
+            }
+
+            Product.BrandId = 0;
         }
 
 
@@ -115,7 +135,6 @@ namespace ElectronicStoreShop.Pages.ChangesPages
             {
                 MessageBox.Show("Введите название товара!", "Ошибка",
                     MessageBoxButton.OK, MessageBoxImage.Warning);
-                NameTextBox.Focus();
                 return false;
             }
 
@@ -123,7 +142,6 @@ namespace ElectronicStoreShop.Pages.ChangesPages
             {
                 MessageBox.Show("Цена должна быть больше 0!", "Ошибка",
                     MessageBoxButton.OK, MessageBoxImage.Warning);
-                PriceTextBox.Focus();
                 return false;
             }
 
@@ -132,15 +150,13 @@ namespace ElectronicStoreShop.Pages.ChangesPages
             {
                 MessageBox.Show("Остаток не может быть отрицательным и равным 0!", "Ошибка",
                     MessageBoxButton.OK, MessageBoxImage.Warning);
-                StockTextBox.Focus();
                 return false;
             }
 
-            if (Product.Rating < 0 || Product.Rating > 5)
+            if (Product.Rating <= 0 || Product.Rating > 5)
             {
                 MessageBox.Show("Рейтинг должен быть от 0 до 5!", "Ошибка",
                     MessageBoxButton.OK, MessageBoxImage.Warning);
-                RatingTextBox.Focus();
                 return false;
             }
 
@@ -148,18 +164,22 @@ namespace ElectronicStoreShop.Pages.ChangesPages
             {
                 MessageBox.Show("Выберите категорию!", "Ошибка",
                     MessageBoxButton.OK, MessageBoxImage.Warning);
-                CategoryComboBox.Focus();
                 return false;
             }
-
+            
             if (Product.BrandId == 0)
             {
                 MessageBox.Show("Выберите бренд!", "Ошибка",
                     MessageBoxButton.OK, MessageBoxImage.Warning);
-                BrandComboBox.Focus();
                 return false;
             }
 
+            if (string.IsNullOrWhiteSpace(Product.Description))
+            {
+                MessageBox.Show("Введите описание!", "Ошибка",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+                return false;
+            }
 
             return true; 
         }
@@ -240,7 +260,16 @@ namespace ElectronicStoreShop.Pages.ChangesPages
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ошибка: {ex.Message}", "Ошибка",
+                var innerEx = ex.InnerException;
+                var fullMessage = ex.Message;
+
+                while (innerEx != null)
+                {
+                    fullMessage += $"Внутреннее исключение: {innerEx.Message}";
+                    innerEx = innerEx.InnerException;
+                }
+
+                MessageBox.Show($"Ошибка: {fullMessage}", "Детали ошибки",
                     MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }

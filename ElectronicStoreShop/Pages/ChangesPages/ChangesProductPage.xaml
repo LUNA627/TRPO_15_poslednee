@@ -107,11 +107,10 @@
                 <TextBlock Text="Описание" Style="{StaticResource ProductDescriptionTextStyle}"/>
                 <TextBox Style="{StaticResource FormDescriptionTextBoxStyle}"
                          Text="{Binding Product.Description, UpdateSourceTrigger=PropertyChanged}"/>
-
-                <!-- Кнопки -->
                 <Button Content="Добавить" 
                         Style="{StaticResource AddButtonObStyle}"
                         Click="AddProduct_Click"/>
+
                 <Button Content="Отмена" 
                         Style="{StaticResource СancelButtonStyle}"
                         Click="Cancel_Click"/>

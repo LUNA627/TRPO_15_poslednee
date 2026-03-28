@@ -186,3 +186,4 @@ C:\Users\LUNA0_0\Desktop\ElectronicStoreShop\ElectronicStoreShop\obj\Debug\net8.
 C:\Users\LUNA0_0\Desktop\ElectronicStoreShop\ElectronicStoreShop\obj\Debug\net8.0-windows\Pages\ManagerPasswordPage.baml
 C:\Users\LUNA0_0\Desktop\ElectronicStoreShop\ElectronicStoreShop\obj\Debug\net8.0-windows\Pages\ViewСhangesPage.baml
 C:\Users\LUNA0_0\Desktop\ElectronicStoreShop\ElectronicStoreShop\obj\Debug\net8.0-windows\App.baml
+C:\Users\LUNA0_0\Desktop\ElectronicStoreShop\ElectronicStoreShop\obj\Debug\net8.0-windows\ElectronicStoreShop.sourcelink.json
