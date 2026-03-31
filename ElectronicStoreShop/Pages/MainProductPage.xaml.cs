@@ -73,6 +73,7 @@ namespace ElectronicStoreShop.Pages
             LoadCategoriesAndBrands();
             LoadSortOptions();
             UpdateCountInfo();
+
         }
 
         private void UpdateCountInfo()

@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:ElectronicStoreShop.Pages"
       mc:Ignorable="d" 
       Style="{StaticResource MainPageStyle}"
-      Title="ViewСhangesPage">
+      Title="Изменения параметров товара">
 
     <Grid>
         <Grid.ColumnDefinitions>

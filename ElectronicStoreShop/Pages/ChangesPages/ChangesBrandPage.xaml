@@ -7,7 +7,7 @@
       xmlns:local="clr-namespace:ElectronicStoreShop.Pages.ChangesPages"
       Style="{StaticResource MainPageStyle}"
       mc:Ignorable="d" 
-      Title="ChangesBrandPage">
+      Title="Управление брендами">
 
     <Grid>
         <Grid.ColumnDefinitions>

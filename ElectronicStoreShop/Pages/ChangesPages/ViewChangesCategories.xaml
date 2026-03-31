@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:ElectronicStoreShop.Pages.ChangesPages"
       mc:Ignorable="d" 
       Style="{StaticResource MainPageStyle}"      
-      Title="ViewChangesCategories">
+      Title="Изменения категорий">
 
     <Grid>
         <Grid.ColumnDefinitions>
