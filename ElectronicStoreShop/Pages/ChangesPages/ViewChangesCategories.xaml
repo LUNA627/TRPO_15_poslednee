@@ -48,8 +48,7 @@
                   x:Name="CategoriesListView"
                   ItemsSource="{Binding Categories}"
                   SelectionMode="Single"
-                  Margin="5,0,10,10"
-                  HorizontalContentAlignment="Stretch">
+                  Margin="5,0,10,10">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Border Style="{StaticResource ChangesSectionBorderStyle}">
@@ -60,7 +59,6 @@
                             </Grid.ColumnDefinitions>
 
                             <StackPanel Grid.Column="0">
-                                <!-- категории -->
                                 <TextBlock Text="{Binding Name}" 
                                            FontWeight="Bold"
                                            FontSize="14"/>

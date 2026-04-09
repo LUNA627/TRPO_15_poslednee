@@ -16,12 +16,14 @@ namespace ElectronicStoreShop.Validation
         {
             var input = (value ?? "").ToString().Trim();
 
+            string normInput = input.Replace('.', ',');
+
             if (input == string.Empty)
             {
                 return new ValidationResult(false, "Введите цену товара");
             }
 
-            if (!decimal.TryParse(input, out decimal inputPrice))
+            if (!decimal.TryParse(normInput, out decimal inputPrice))
             {
                 return new ValidationResult(false, "Некорректный ввод числа");
             }

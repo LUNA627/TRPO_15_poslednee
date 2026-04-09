@@ -58,7 +58,6 @@
                             </Grid.ColumnDefinitions>
 
                             <StackPanel Grid.Column="0">
-                                <!-- Название тега -->
                                 <TextBlock Text="{Binding Name}" 
                                  FontWeight="Bold"
                                  FontSize="14"/>

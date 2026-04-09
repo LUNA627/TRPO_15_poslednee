@@ -92,7 +92,6 @@ namespace ElectronicStoreShop.Pages
 
 
 
-        // Загрузка товаров
         private void LoadList()
         {
             Products.Clear();
@@ -298,6 +297,7 @@ namespace ElectronicStoreShop.Pages
                     return;
                 }
             }
+            UpdateCountInfo();
         }
 
 
@@ -361,13 +361,11 @@ namespace ElectronicStoreShop.Pages
        
         private void ApplySorting()
         {
-            // Очистка пред. сортировки
             ProductsView.SortDescriptions.Clear();
 
             if (string.IsNullOrWhiteSpace(SortField))
                 return;
 
-            // Направление
             var direction = IsSortAscending ? ListSortDirection.Ascending : ListSortDirection.Descending;
 
             ProductsView.SortDescriptions.Add(new SortDescription(SortField, direction));
