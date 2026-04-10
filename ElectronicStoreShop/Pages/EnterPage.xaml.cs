@@ -31,11 +31,15 @@ namespace ElectronicStoreShop.Pages
         {
             App.CurrentUserType = App.UserType.Visitor;
             NavigationService.Navigate(new MainProductPage());
+            Window window = Application.Current.MainWindow;
+            window.Title = "Каталог товаров (пользователь)";
         }
 
         private void BtnEnterManager_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new ManagerPasswordPage());  
+            NavigationService.Navigate(new ManagerPasswordPage());
+            Window window = Application.Current.MainWindow;
+            window.Title = "Вход для менеджера";
         }
     }
 }

@@ -66,6 +66,8 @@ namespace ElectronicStoreShop.Pages.ChangesPages
             if (CategoriesListView.SelectedItem is Category selectedCategory)
             {
                 NavigationService?.Navigate(new ChangesCategoryPage(selectedCategory.Id));
+                Window window = Application.Current.MainWindow;
+                window.Title = "Управление категориями";
             }
             else
             {
@@ -138,6 +140,8 @@ namespace ElectronicStoreShop.Pages.ChangesPages
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new ViewСhangesPage());
+            Window window = Application.Current.MainWindow;
+            window.Title = "Управление категориями";
         }
 
     }

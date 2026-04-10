@@ -59,6 +59,8 @@ namespace ElectronicStoreShop.Pages.ChangesPages
         private void AddTag_Click(object sender, RoutedEventArgs e)
         {
             NavigationService?.Navigate(new ChangesTagPage(null));
+            Window window = Application.Current.MainWindow;
+            window.Title = "Управление тегами";
         }
 
         private void EditTag_Click(object sender, RoutedEventArgs e)
@@ -66,6 +68,8 @@ namespace ElectronicStoreShop.Pages.ChangesPages
             if (TagsListView.SelectedItem is Tag selectedTag)
             {
                 NavigationService?.Navigate(new ChangesTagPage(selectedTag.Id));
+                Window window = Application.Current.MainWindow;
+                window.Title = "Управление брендами";
             }
             else
             {
@@ -145,6 +149,7 @@ namespace ElectronicStoreShop.Pages.ChangesPages
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new ViewСhangesPage());
+           
         }
     }
 }

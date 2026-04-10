@@ -124,11 +124,15 @@ namespace ElectronicStoreShop.Pages.ChangesPages
             }
 
             NavigationService.Navigate(new ChangesProductPage(selectedProduct.Id));
+            Window window = Application.Current.MainWindow;
+            window.Title = "Изменения товара";
         }
 
         private void AddProduct_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new ChangesProductPage(null));
+            Window window = Application.Current.MainWindow;
+            window.Title = "Добавление товара";
         }
     }
 }

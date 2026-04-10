@@ -56,26 +56,36 @@ namespace ElectronicStoreShop.Pages
         private void ChangesProduct_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new ViewChangesProducts());
+            Window window = Application.Current.MainWindow;
+            window.Title = "Изменения продуктов";
         }
 
         private void ChangesCategory_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new ViewChangesCategories());
+            Window window = Application.Current.MainWindow;
+            window.Title = "Изменения категорий";
         }
 
         private void ChangesTag_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new ViewChangesTags());
+            Window window = Application.Current.MainWindow;
+            window.Title = "Изменения тегов";
         }
 
         private void ChangesBrand_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new ViewChangesBrands());
+            Window window = Application.Current.MainWindow;
+            window.Title = "Изменения брендов";
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new MainProductPage());
+            Window window = Application.Current.MainWindow;
+            window.Title = "Каталог товаров (менеждер)";
         }
     }
 }

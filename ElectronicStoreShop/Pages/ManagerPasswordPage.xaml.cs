@@ -39,7 +39,8 @@ namespace ElectronicStoreShop.Pages
             {
                 App.CurrentUserType = App.UserType.Manager;
                 NavigationService.Navigate(new MainProductPage());
-
+                Window window = Application.Current.MainWindow;
+                window.Title = "Каталог товаров (менеджер)";
 
             }
             else

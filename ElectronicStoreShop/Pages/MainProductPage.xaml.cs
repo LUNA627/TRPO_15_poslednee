@@ -419,6 +419,8 @@ namespace ElectronicStoreShop.Pages
             }
 
             NavigationService.Navigate(new ViewСhangesPage());
+            Window window = Application.Current.MainWindow;
+            window.Title = "Изменения параметров товара";
 
         }
 

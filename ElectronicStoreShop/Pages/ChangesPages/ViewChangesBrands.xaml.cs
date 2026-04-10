@@ -63,7 +63,8 @@ namespace ElectronicStoreShop.Pages.ChangesPages
         private void AddBrand_Click(object sender, RoutedEventArgs e)
         {
             NavigationService?.Navigate(new ChangesBrandPage(null));
-
+            Window window = Application.Current.MainWindow;
+            window.Title = "Управление брендами";
         }
 
         private void EditBrand_Click(object sender, RoutedEventArgs e)
@@ -71,6 +72,8 @@ namespace ElectronicStoreShop.Pages.ChangesPages
             if (BrandsListView.SelectedItem is Brand selectedBrand)
             {
                 NavigationService?.Navigate(new ChangesBrandPage(selectedBrand.Id));
+                Window window = Application.Current.MainWindow;
+                window.Title = "Управление брендами";
             }
             else
             {

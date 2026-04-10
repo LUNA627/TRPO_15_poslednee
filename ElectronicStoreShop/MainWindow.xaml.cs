@@ -22,6 +22,8 @@ namespace ElectronicStoreShop
         {
             InitializeComponent();
             MainFrame.Navigate(new EnterPage());
+            Window window = Application.Current.MainWindow;
+            window.Title = "Вход в магазин электроники";
         }
     }
 }
